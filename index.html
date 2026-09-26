@@ -1,225 +1,117 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kızılderililer — Kuzey Amerika'nın İlk Halkları</title>
-<style>
-  :root {
-    --toprak: #8b5a2b;
-    --koyu: #3e2723;
-    --kum: #f5e6d3;
-    --kirmizi: #c0392b;
-    --turkuaz: #1a7a6e;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: Georgia, 'Times New Roman', serif;
-    background: var(--kum);
-    color: var(--koyu);
-    line-height: 1.7;
-  }
-  header {
-    background: linear-gradient(135deg, var(--koyu), var(--toprak));
-    color: var(--kum);
-    text-align: center;
-    padding: 70px 20px;
-  }
-  header h1 { font-size: 2.8em; letter-spacing: 2px; }
-  header p { margin-top: 12px; font-style: italic; opacity: .9; }
-  .serit {
-    height: 10px;
-    background: repeating-linear-gradient(90deg, var(--kirmizi) 0 30px, var(--kum) 30px 40px, var(--turkuaz) 40px 70px, var(--kum) 70px 80px);
-  }
-  nav {
-    background: var(--koyu);
-    text-align: center;
-    padding: 12px;
-    position: sticky; top: 0;
-  }
-  nav a {
-    color: var(--kum); text-decoration: none;
-    margin: 0 14px; font-size: 1.05em;
-  }
-  nav a:hover { color: var(--turkuaz); }
-  section { max-width: 900px; margin: 0 auto; padding: 50px 20px; }
-  section h2 {
-    color: var(--toprak);
-    border-left: 6px solid var(--kirmizi);
-    padding-left: 12px;
-    margin-bottom: 20px;
-    font-size: 1.9em;
-  }
-  .kartlar { display: flex; flex-wrap: wrap; gap: 20px; }
-  .kart {
-    flex: 1 1 260px;
-    background: #fff;
-    border-radius: 10px;
-    padding: 22px;
-    box-shadow: 0 2px 8px rgba(0,0,0,.12);
-    border-top: 5px solid var(--turkuaz);
-  }
-  .kart h3 { color: var(--kirmizi); margin-bottom: 8px; }
-  .kart img.portre { width: 100%; height: 170px; object-fit: cover; border-radius: 6px; margin-bottom: 12px; }
-  .kart .kaynak { font-size: .8em; opacity: .7; font-style: italic; margin-top: 6px; }
-  .kart:nth-child(2) { border-top-color: var(--kirmizi); }
-  .kart:nth-child(3) { border-top-color: var(--toprak); }
-  ul.dolap { list-style: none; }
-  ul.dolap li { padding: 8px 0 8px 28px; position: relative; }
-  ul.dolap li::before { content: "🪶"; position: absolute; left: 0; }
-  blockquote {
-    background: #fff; border-left: 6px solid var(--turkuaz);
-    padding: 20px 24px; border-radius: 8px;
-    font-style: italic; margin: 24px 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,.1);
-  }
-  footer {
-    background: var(--koyu); color: var(--kum);
-    text-align: center; padding: 30px 20px; margin-top: 40px;
-    font-size: .95em;
-  }
-  .not { font-size: .9em; opacity: .75; font-style: italic; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kızılderili Kültürü ve Tarihi</title>
+    <!-- Google AdSense kodunuzu buraya ekleyebilirsiniz -->
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+        header {
+            background: #8b0000;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        nav {
+            background: #333;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 15px;
+            display: inline-block;
+        }
+        nav a:hover {
+            background: #555;
+            border-radius: 4px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .content-section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #8b0000;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #8b0000;
+            padding-bottom: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            background: #333;
+            color: #fff;
+            border-radius: 8px;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            nav a {
+                display: block;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<header>
-  <h1>🪶 Kızılderililer</h1>
-  <p>Kuzey Amerika'nın binlerce yıllık ilk halklarının dünyası</p>
-</header>
-<div class="serit"></div>
+    <header>
+        <h1>Kızılderili Kültürü ve Tarihi</h1>
+        <p>Yerli Halkların Tarihi, Gelenekleri ve Yaşam Tarzları</p>
+    </header>
 
-<nav>
-  <a href="#tarih">Tarih</a>
-  <a href="#kabileler">Kabileler</a>
-  <a href="#kultur">Kültür</a>
-  <a href="#galeri">Galeri</a>
-  <a href="#sozler">Sözler</a>
-</nav>
+    <nav>
+        <a href="#tarih">Tarihçe</a>
+        <a href="#kultur">Kültür ve İnanç</a>
+        <a href="#kabileler">Kabileler</a>
+    </nav>
 
-<section id="tarih">
-  <h2>Tarih</h2>
-  <p>
-    Kızılderililer, Kuzey Amerika kıtasının en eski sakinleridir. Ataları yaklaşık
-    <strong>15.000–20.000 yıl önce</strong>, Bering Boğazı üzerinden Asya'dan Amerika'ya
-    geçmiş avcı-toplayıcı topluluklardır. Zamanla kıtanın her köşesine yayıldılar ve
-    yüzlerce farklı halk, dil ve kültür geliştirdiler.
-  </p>
-  <p>
-    1492'de Kristof Kolomb'un yolculuğuyla başlayan Avrupa teması, yerli halkların
-    tarihinde dönüm noktası oldu. Hastalıklar, savaşlar ve toprak kayıpları yüzünden
-    nüfusları büyük ölçüde azaldı; ancak kültürleri bugün de yaşamaya devam ediyor.
-    Bugün ABD ve Kanada'da <strong>5 milyondan fazla</strong> insan kendini yerli
-    soyundan saymaktadır.
-  </p>
-</section>
+    <div class="container">
+        <section id="tarih" class="content-section">
+            <h2>Tarihçe</h2>
+            <p>Amerika kıtasının yerli halkları binlerce yıllık köklü bir geçmişe sahiptir. Doğa ile uyum içinde sürdürdükleri yaşam tarzları, kıtanın keşfi ve sonraki süreçlerle büyük değişimlere uğramıştır.</p>
+        </section>
 
-<section id="kabileler">
-  <h2>Önemli Kabileler</h2>
-  <div class="kartlar">
-    <div class="kart">
-      <img class="portre" src="site-y%C3%BCkle/images/sitting-bull.jpg" alt="Oturan Boğa, 1885">
-      <h3>Lakota (Sioux)</h3>
-      <p>Great Plains'in ünlü atlı avcıları. Oturan Boğa ve Kızıl Bulut gibi liderleriyle
-      ABD ordusuna karşı direnişleri efsaneleşmiştir.</p>
-      <p class="kaynak">📷 Oturan Boğa, Montreal 1885 · Kamu malı</p>
-    </div>
-    <div class="kart">
-      <img class="portre" src="site-y%C3%BCkle/images/navajo.jpg" alt="Navajo tıpbabası, 1900">
-      <h3>Navajo (Diné)</h3>
-      <p>Amerika'nın en kalabalık kabilelerinden. Dokumacılığı ve kum resmi sanatıyla
-      ünlüdürler; "Uzun Yürüyüş" trajedisi tarihlerine damga vurmuştur.</p>
-      <p class="kaynak">📷 Navajo tıpbabası, E.S. Curtis 1900 · Kamu malı</p>
-    </div>
-    <div class="kart">
-      <img class="portre" src="site-y%C3%BCkle/images/irokuez.jpg" alt="Altı Ulus genç şefi, John Trumbull">
-      <h3>İrokezler (Haudenosaunee)</h3>
-      <p>Altı ulusun oluşturduğu birlik, demokratik konsey sistemiyle dünyanın en eski
-      yaşayan federasyonlarından biri sayılır.</p>
-      <p class="kaynak">📷 "Genç Şef", J. Trumbull · Kamu malı</p>
-    </div>
-    <div class="kart">
-      <img class="portre" src="site-y%C3%BCkle/images/cherokee.jpg" alt="Cherokee şefi John Ross">
-      <h3>Cherokee</h3>
-      <p>Kendi alfabesini (Sekoya'nın hece yazısını) geliştiren, gazete çıkaran ve
-      anayasası olan köklü bir halk. Portrede şef John Ross.</p>
-      <p class="kaynak">📷 Şef John Ross · Kamu malı</p>
-    </div>
-    <div class="kart">
-      <img class="portre" src="site-y%C3%BCkle/images/geronimo.jpg" alt="Geronimo, Edward S. Curtis">
-      <h3>Apache</h3>
-      <p>Çöl ve dağ hayatına mükemmel uyum sağlamış, ünlü liderleri Geronimo ile
-      bilinen cesur savaşçılar halkı.</p>
-      <p class="kaynak">📷 Geronimo, E.S. Curtis · Kamu malı</p>
-    </div>
-    <div class="kart">
-      <h3>Çerokiler Öncesi Uygarlıklar</h3>
-      <p>Cahokia gibi dev toprak höyük şehirleri, Avrupa öncesi Kuzey Amerika'nın
-      büyük şehirleriydi.</p>
-    </div>
-  </div>
-</section>
+        <section id="kultur" class="content-section">
+            <h2>Kültür ve İnanç</h2>
+            <p>Kızılderili kültüründe doğaya saygı ve topluluk bilinci ön plandadır. Sözlü gelenekler, mitoloji ve ritüeller nesilden nesile aktarılan önemli değerlerdir.</p>
+        </section>
 
-<section id="kultur">
-  <h2>Kültür ve İnanç</h2>
-  <ul class="dolap">
-    <li><strong>Toprağa saygı:</strong> Doğa bir anakannedir; avlanan her hayvana teşekkür edilir.</li>
-    <li><strong>Totem direkleri:</strong> Pasifik kıyısı kabilelerinde aile soyunu anlatan oyma sanatı.</li>
-    <li><strong>Tıp çemberi (Medicine Wheel):</strong> Dört yönü, dört mevsimi ve hayatın dengesini simgeler.</li>
-    <li><strong>Kaççina ruhları:</strong> Hopi ve Zuni halklarının yağmur ve bereket temsilcileri.</li>
-    <li><strong>Hayalet Dansı (Ghost Dance):</strong> 1890'da umudu temsil eden ruhani hareket.</li>
-    <li><strong>Söz sanatı:</strong> Hikâye anlatıcılığı (storytelling) en değerli miras aktarım biçimidir.</li>
-  </ul>
-</section>
-
-<section id="galeri">
-  <h2>Galeri</h2>
-  <p class="not" style="margin-bottom:18px;">Fotoğraflar Wikimedia Commons'tan, serbest lisansla alınmıştır.</p>
-  <div class="kartlar">
-
-    <div class="kart">
-      <h3>Tipi Önünde Nez Perce Çifti (1900)</h3>
-      <img src="site-y%C3%BCkle/images/tipi.jpg" alt="Tipi önünde Nez Perce çifti, 1900" style="width:100%; border-radius:6px;">
-      <p class="not">Tarihi fotoğraf · Kamu malı (Wikimedia Commons)</p>
+        <section id="kabileler" class="content-section">
+            <h2>Önemli Kabileler</h2>
+            <p>Kuzey, Orta ve Güney Amerika'da farklı yaşam tarzlarına sahip çok sayıda kabile bulunmaktaydı. Apaçiler, Siyular, Çerokiler bunlardan sadece birkaçıdır.</p>
+        </section>
     </div>
 
-    <div class="kart">
-      <h3>Totem Direkleri (Alert Bay, Kanada)</h3>
-      <img src="site-y%C3%BCkle/images/totem.jpg" alt="Alert Bay'deki totem direkleri" style="width:100%; border-radius:6px;">
-      <p class="not">Fotoğraf · Telifsiz (Wikimedia Commons)</p>
-    </div>
-
-    <div class="kart">
-      <h3>Oglala Lakota Şefi Kızıl Gömlek'in Tüy Başlığı</h3>
-      <img src="site-y%C3%BCkle/images/warbonnet.jpg" alt="Oglala Lakota Şefi Kızıl Gömlek'in tüy başlığı" style="width:100%; border-radius:6px;">
-      <p class="not">Peabody Museum koleksiyonu · Kamu malı</p>
-    </div>
-
-    <div class="kart">
-      <h3>Bizon Sürüsü (Yellowstone)</h3>
-      <img src="site-y%C3%BCkle/images/bizon.jpg" alt="Yellowstone'da bizon sürüsü" style="width:100%; border-radius:6px;">
-      <p class="not">Fotoğraf · CC BY 2.0 (Wikimedia Commons)</p>
-    </div>
-
-  </div>
-</section>
-
-<section id="sozler">
-  <h2>Yerli Sözler</h2>
-  <blockquote>
-    "Toprağı biz miras almadık; çocuklarımızdan ödünç aldık."
-    <br>— Kızılderili vecizesi
-  </blockquote>
-  <blockquote>
-    "Kalbinle dinle; yeryüzünün şarkısını duyacaksın."
-    <br>— Lakota öğretisi
-  </blockquote>
-</section>
-
-<footer>
-  <p>🪶 Kızılderililer — Kuzey Amerika'nın İlk Halkları</p>
-  <p class="not">Bu site eğitim amaçlı hazırlanmış bir tanıtım sayfasıdır.</p>
-</footer>
+    <footer>
+        <p>&copy; 2026 Kızılderili Kültür Sitesi - Tüm Hakları Saklıdır.</p>
+    </footer>
 
 </body>
 </html>
