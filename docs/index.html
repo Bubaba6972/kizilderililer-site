@@ -88,6 +88,21 @@
   body.dark nav { background: #241a12; }
   .tema-buton { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); background: none; border: 2px solid var(--kum); color: var(--kum); border-radius: 20px; padding: 4px 12px; cursor: pointer; font-size: .95em; }
   .tema-buton:hover { background: var(--turkuaz); }
+  .dil-buton { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); background: none; border: 2px solid var(--kum); color: var(--kum) !important; border-radius: 20px; padding: 4px 12px; font-size: .95em; margin: 0 !important; }
+  .dil-buton:hover { background: var(--turkuaz); }
+  .timeline { margin: 20px 0; }
+  .timeline-madde {
+    background: #fff; border-radius: 10px; padding: 16px 20px; margin-bottom: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1); border-left: 5px solid var(--toprak);
+  }
+  .timeline-madde strong { color: var(--kirmizi); display: block; margin-bottom: 4px; }
+  .ayrac { display: flex; align-items: center; gap: 12px; margin: 28px 0 0; }
+  .ayrac .cizgi { flex: 1; height: 2px; background: var(--toprak); opacity: .4; }
+  .ayrac .ikon { font-size: 1.4em; }
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.gorunur { opacity: 1; transform: translateY(0); }
+  body.dark .timeline-madde { background: #2c2118; color: #e8dcc8; border-left-color: #d4a26a; }
+  body.dark .timeline-madde strong { color: #e07b4e; }
 </style>
 </head>
 <body>
@@ -115,6 +130,7 @@
   <a href="#galeri">Galeri</a>
   <a href="#sozler">Sözler</a>
   <button class="tema-buton" id="temaButon" title="Tema Değiştir (T)">🌙 Tema</button>
+  <a class="dil-buton" href="en.html" title="Switch to English">🌐 EN</a>
 </nav>
 
 <section id="tarih">
@@ -559,6 +575,17 @@
     localStorage.setItem('tema', dark?'dark':'light');
   };
   document.addEventListener('keydown', function(e){ if(e.key.toLowerCase()==='t' && !e.ctrlKey && !e.altKey && !e.metaKey){ btn.click(); } });
+})();
+
+(function(){
+  if(!('IntersectionObserver' in window)){
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('gorunur'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('gorunur'); io.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
 })();
 </script>
 </body>
